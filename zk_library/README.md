@@ -74,3 +74,35 @@
     ]
 }
 ```
+
+## Verify zk Proof
+
+- url : /delegate/verify/
+- verifies the zk proof on-chain
+- method : POST
+- request : 
+```json 
+{
+	"proof":{
+
+        "proof": {
+
+            "a": ["0x29da7ea8ab9fb249262bde5e28400b7d4c8ff5fe66f9a7f3057b08bea06e2321", "0x0b130d35748b8dc379450f2dd0a7b56a58016f03d18e1a8dc58e9d71ee8a06e1"],
+            
+            "b": [["0x05556a0f52002f7d5b88c163acc3d0653eb8461bc7aa6a22b2b281b5e373fd01", "0x0257331d7b0bcdb19d07dba458100b624395fd5daefc11c0ccd13dad8c0d6fe2"], ["0x0f0967b5ca3245a0b687b56a7bf75a9d2a4a73a536f292bb272c9a684ebc4329", "0x1b94c0a4c130fa8538b1425a5b645020e94b03335ed7fc0b068f57526e2554fb"]],
+
+            "c": ["0x28d5443ca4fa3acbc7447ffaaf34e7d74a6c6d755d813b87f19134de0a88fdc9", "0x0036bd7b349b279ed88c7d1584078e9fb0718f419888b02f2d56c38e964f3552"]
+        },
+
+        "inputs": ["0x000000000000000000000000000000000fef70c5249a20db7e4e4a2c799e0906", "0x00000000000000000000000000000000ba4ddcbf9d496825b2f23e4b0976a734", "0x0000000000000000000000000000000000000000000000000000000000000001"]
+        
+    }
+}
+
+```
+- response: 
+```json
+{
+    "result": true
+}
+```

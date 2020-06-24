@@ -56,7 +56,7 @@ app.post("/delegate/verify", async (req, res) => {
     var result  = await secretVerifier.methods.verifyTx(secret_proof["proof"]["a"],secret_proof["proof"]["b"],secret_proof["proof"]["c"],secret_proof["inputs"])
     .call({from:accounts[0],gas:600000 });
     console.log(result);
-    res.json(result);
+    res.json({result:result});
 })
 
 async function getContracts() {
