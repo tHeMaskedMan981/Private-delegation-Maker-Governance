@@ -1,5 +1,6 @@
 
 const SecretVerifier = artifacts.require('SecretVerifier');
+const Test = artifacts.require('Test');
 const Secret_proof = require("../../get_proof/proof.json");
 const Web3 = require('web3')
 var web3 = new Web3();  
@@ -7,13 +8,13 @@ const BigNumber = require('bignumber.js');
 
 // console.log(proof);
 contract('SecretVerifier', (accounts) => {
-    let SecretVerifierInstance;
+    let SecretVerifierInstance, TestInstance;
     let creator;
 
 
     before(async () => {
         SecretVerifierInstance = await SecretVerifier.deployed();
-        
+        TestInstance = await Test.deployed();
     })
 
     it('should be able to deploy', async () => {
@@ -38,6 +39,14 @@ contract('SecretVerifier', (accounts) => {
 
         console.log(Secret_proof);
         verification_status = await SecretVerifierInstance.verifyTx.call(Secret_proof["proof"]["a"],Secret_proof["proof"]["b"],Secret_proof["proof"]["c"],Secret_proof["inputs"], {from:accounts[0], gas: 4000000});
+        console.log(verification_status);
+        // console.log(verification_status["logs"]);   
+    });
+
+    it("should verify Secret correctly from test contract", async () => {
+
+        console.log(Secret_proof);
+        verification_status = await TestInstance.verify.call(Secret_proof["proof"]["a"],Secret_proof["proof"]["b"],Secret_proof["proof"]["c"],Secret_proof["inputs"], {from:accounts[0], gas: 4000000});
         console.log(verification_status);
         // console.log(verification_status["logs"]);   
     });
