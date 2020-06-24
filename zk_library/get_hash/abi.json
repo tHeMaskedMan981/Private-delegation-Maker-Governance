@@ -1,0 +1,22 @@
+{
+  "inputs": [
+    {
+      "name": "preimage",
+      "public": true,
+      "type": "array",
+      "components": {
+        "size": 2,
+        "type": "field"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "type": "array",
+      "components": {
+        "size": 2,
+        "type": "field"
+      }
+    }
+  ]
+}

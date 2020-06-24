@@ -1,0 +1,27 @@
+{
+  "inputs": [
+    {
+      "name": "preimage",
+      "public": false,
+      "type": "array",
+      "components": {
+        "size": 2,
+        "type": "field"
+      }
+    },
+    {
+      "name": "hash",
+      "public": true,
+      "type": "array",
+      "components": {
+        "size": 2,
+        "type": "field"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "type": "field"
+    }
+  ]
+}
