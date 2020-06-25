@@ -51,6 +51,21 @@ contract('SecretVerifier', (accounts) => {
         // console.log(verification_status["logs"]);   
     });
 
+    it("should check secret hash correctly", async () => {
+        let hash = "0x" + "c33be47cb71b2f69e60d596125550419b66857e3d3b2a12542e65b54a4637e72";
+        console.log(hash, Secret_proof["inputs"][0], Secret_proof["inputs"][1]);
+        await TestInstance.store(hash, {from:accounts[0], gas: 4000000});
+        console.log("in the contract : ",  await TestInstance.secret.call());
+        verification_status = await TestInstance.check.call(Secret_proof["inputs"][0], Secret_proof["inputs"][1], {from:accounts[0], gas: 4000000});
+        console.log(verification_status);
+
+        let secret = await TestInstance.secret.call();
+        let secret2 = await TestInstance.secret2.call();
+
+        console.log("secrets : \n", secret, "\n", secret2, "\n", BigNumber(secret2).toFixed());
+        // console.log(verification_status["logs"]);   
+    });
+
     // it("should verify voter eligibility correctly", async () => {
 
     //     let Secret = "secure voting key";

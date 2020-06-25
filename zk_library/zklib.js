@@ -29,7 +29,7 @@ async function generate_secret_proof(secret, secret_hash){
 
     let generate_proof_command = 'zokrates generate-proof';
     execSync(generate_proof_command, {cwd: './get_proof', encoding: 'utf-8', maxBuffer:10000*1024 });
-    let proof = require("./get_hash/proof.json");
+    let proof = require("./get_proof/proof.json");
    
     return proof;
 }

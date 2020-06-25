@@ -18,16 +18,17 @@
 // vote w/ a hot or cold wallet using a proxy identity
 pragma solidity >=0.4.24;
 
-import "./token.sol";
+import "./tokengov.sol";
+import "./tokeniou.sol";
 import "./chief.sol";
 
 contract VoteProxy {
     address public cold;
     address public hot;
-    DSToken public gov;
-    DSToken public iou;
+    DSTokenGOV public gov;
+    DSTokenIOU public iou;
     DSChief public chief;
-    uint256 public secretHash;
+    bytes32 public secretHash;
 
     constructor(DSChief _chief, address _cold, address _hot) public {
         chief = _chief;
@@ -69,6 +70,7 @@ contract VoteProxy {
     }
 
     function setSecret(uint256 _secretHash) public {
-        secretHash = _secretHash;
+        secretHash = bytes32(_secretHash);
+        chief.setSecretHash(secretHash);
     }
 }

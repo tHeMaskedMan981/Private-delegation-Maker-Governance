@@ -17,32 +17,32 @@
 
 pragma solidity >=0.4.23;
 
-import "./stop.sol";
+// import "./stop.sol";
 import "./base.sol";
 
-contract DSToken is DSTokenBase(0), DSStop {
+contract DSTokenGOV is DSTokenBase(0) {
 
-    bytes32  public  symbol;
+    bytes32  public  symbol = "GOV";
     uint256  public  decimals = 18; // standard token precision. override to customize
 
     constructor(bytes32 symbol_) public {
-        symbol = symbol_;
+        // symbol = symbol_;
     }
 
     event Mint(address indexed guy, uint wad);
     event Burn(address indexed guy, uint wad);
 
-    function approve(address guy) public stoppable returns (bool) {
+    function approve(address guy) public  returns (bool) {
         return super.approve(guy, uint(-1));
     }
 
-    function approve(address guy, uint wad) public stoppable returns (bool) {
+    function approve(address guy, uint wad) public  returns (bool) {
         return super.approve(guy, wad);
     }
 
     function transferFrom(address src, address dst, uint wad)
         public
-        stoppable
+        
         returns (bool)
     {
         if (src != msg.sender && _approvals[src][msg.sender] != uint(-1)) {
@@ -75,12 +75,12 @@ contract DSToken is DSTokenBase(0), DSStop {
     function burn(uint wad) public {
         burn(msg.sender, wad);
     }
-    function mint(address guy, uint wad) public auth stoppable {
+    function mint(address guy, uint wad) public {
         _balances[guy] = add(_balances[guy], wad);
         _supply = add(_supply, wad);
         emit Mint(guy, wad);
     }
-    function burn(address guy, uint wad) public auth stoppable {
+    function burn(address guy, uint wad) public {
         if (guy != msg.sender && _approvals[guy][msg.sender] != uint(-1)) {
             require(_approvals[guy][msg.sender] >= wad, "ds-token-insufficient-approval");
             _approvals[guy][msg.sender] = sub(_approvals[guy][msg.sender], wad);
@@ -95,7 +95,7 @@ contract DSToken is DSTokenBase(0), DSStop {
     // Optional token name
     bytes32   public  name = "";
 
-    function setName(bytes32 name_) public auth {
+    function setName(bytes32 name_) public {
         name = name_;
     }
 }

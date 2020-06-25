@@ -22,7 +22,7 @@ import "./math.sol";
 
 contract DSTokenBase is ERC20, DSMath {
     uint256                                            _supply;
-    mapping (address => uint256)                       _balances;
+    mapping (address => uint256)            public           _balances;
     mapping (address => mapping (address => uint256))  _approvals;
 
     constructor(uint supply) public {
