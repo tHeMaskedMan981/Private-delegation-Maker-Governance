@@ -10,6 +10,8 @@ We have built the enitre application on top of the Maker Contracts and that make
 
 We have written a medium article documenting our journey in the hackathon and the design decisions we made. It's highly recommended to read that too. You can read that [here.](https://medium.com/@akash.minato/privacy-preserving-vote-delegation-in-maker-governance-voting-fd0c03d27ff7)
 
+We also have a video demo [here.](https://vimeo.com/434983695)
+
 # Installation
 
 ```sh
