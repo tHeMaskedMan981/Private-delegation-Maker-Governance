@@ -1,0 +1,76 @@
+/// VoteProxy.sol
+
+// Copyright (C) 2018-2020 Maker Ecosystem Growth Holdings, INC.
+
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+// vote w/ a hot or cold wallet using a proxy identity
+pragma solidity >=0.4.24;
+
+import "./tokengov.sol";
+import "./tokeniou.sol";
+import "./chief.sol";
+
+contract VoteProxy {
+    address public cold;
+    address public hot;
+    DSTokenGOV public gov;
+    DSTokenIOU public iou;
+    DSChief public chief;
+    bytes32 public secretHash;
+
+    constructor(DSChief _chief, address _cold, address _hot) public {
+        chief = _chief;
+        cold = _cold;
+        hot = _hot;
+
+        gov = chief.GOV();
+        iou = chief.IOU();
+        gov.approve(address(chief), uint256(-1));
+        iou.approve(address(chief), uint256(-1));
+    }
+
+    modifier auth() {
+        require(msg.sender == hot || msg.sender == cold, "Sender must be a Cold or Hot Wallet");
+        _;
+    }
+
+    function lock(uint256 wad) public auth {
+        gov.pull(cold, wad);   // mkr from cold
+        chief.lock(wad);       // mkr out, ious in
+    }
+
+    function free(uint256 wad) public auth {
+        chief.free(wad);       // ious out, mkr in
+        gov.push(cold, wad);   // mkr to cold
+    }
+
+    function freeAll() public auth {
+        chief.free(chief.deposits(address(this)));
+        gov.push(cold, gov.balanceOf(address(this)));
+    }
+
+    function vote(address[] memory yays) public auth returns (bytes32) {
+        return chief.vote(yays);
+    }
+
+    function vote(bytes32 slate) public auth {
+        chief.vote(slate);
+    }
+
+    function setSecret(uint256 _secretHash) public {
+        secretHash = bytes32(_secretHash);
+        chief.setSecretHash(secretHash);
+    }
+}

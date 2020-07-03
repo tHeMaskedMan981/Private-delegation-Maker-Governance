@@ -1,0 +1,894 @@
+{
+  "contractName": "DSThing",
+  "abi": [
+    {
+      "anonymous": true,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes4",
+          "name": "sig",
+          "type": "bytes4"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "guy",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "foo",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "bar",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "wad",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "fax",
+          "type": "bytes"
+        }
+      ],
+      "name": "LogNote",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "authority",
+          "type": "address"
+        }
+      ],
+      "name": "LogSetAuthority",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "LogSetOwner",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "authority",
+      "outputs": [
+        {
+          "internalType": "contract DSAuthority",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "contract DSAuthority",
+          "name": "authority_",
+          "type": "address"
+        }
+      ],
+      "name": "setAuthority",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner_",
+          "type": "address"
+        }
+      ],
+      "name": "setOwner",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":true,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes4\",\"name\":\"sig\",\"type\":\"bytes4\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"guy\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"foo\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"bar\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"wad\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"fax\",\"type\":\"bytes\"}],\"name\":\"LogNote\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"authority\",\"type\":\"address\"}],\"name\":\"LogSetAuthority\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"LogSetOwner\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"authority\",\"outputs\":[{\"internalType\":\"contract DSAuthority\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"contract DSAuthority\",\"name\":\"authority_\",\"type\":\"address\"}],\"name\":\"setAuthority\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner_\",\"type\":\"address\"}],\"name\":\"setOwner\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/saru/Blockchain/makerdao-priv-delegation/maker-gov/maker-ui/contracts/thing.sol\":\"DSThing\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/saru/Blockchain/makerdao-priv-delegation/maker-gov/maker-ui/contracts/auth.sol\":{\"keccak256\":\"0x125bedbb64ab38773b9ca8c56da723e476d653a7541562b769cfaee873b2d051\",\"urls\":[\"bzz-raw://1e676f2c55bae4a3679696f9824e2b4444fa9c6e59164aea84b18e6fc32a7a2a\",\"dweb:/ipfs/QmfCdxBeW7vpgYeb2zY6qBY7S4bvSDCyK5XwU7cBnLgBbg\"]},\"/home/saru/Blockchain/makerdao-priv-delegation/maker-gov/maker-ui/contracts/math.sol\":{\"keccak256\":\"0x80e6a0a8c766b1d5d1a1605a2b61923ac75b4ab9c0b4d50965edb52cf1ac7aaf\",\"urls\":[\"bzz-raw://f668a37dc7d2febce082a5bc9ee9f923a88022f64bb23620c2cd6ed053b8ee89\",\"dweb:/ipfs/QmZAxnLZAtH5WKhtcgJr7UG7ecMipBC82Yzr83zkW9coqY\"]},\"/home/saru/Blockchain/makerdao-priv-delegation/maker-gov/maker-ui/contracts/note.sol\":{\"keccak256\":\"0xa407c00baae69286115bd09ce2f6df9a3d04e0947cd4334fe5504e722e936459\",\"urls\":[\"bzz-raw://94185e330531306882f1e6705fd5ea69663b6c4cb1f67875ec136b145edd79ef\",\"dweb:/ipfs/QmPx9AwVqLFpXotFTi7f1b6wSJhtzc7unj3YZZcgPWJ7mU\"]},\"/home/saru/Blockchain/makerdao-priv-delegation/maker-gov/maker-ui/contracts/thing.sol\":{\"keccak256\":\"0xd5e4ab45fb6ef179dc6dec64b7687ffa7eda9768786d5b9f31a8baefae90ea4a\",\"urls\":[\"bzz-raw://4c93d86befbb5aaeb660fe7f844ae22e5f19a011a3deed5510d13b0e6eead6e4\",\"dweb:/ipfs/QmfAkHoPg6erCe9pmmsQV1NRMzL9wAPwSf4SvR1nVdtGfx\"]}},\"version\":1}",
+  "bytecode": "0x608060405233600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055503373ffffffffffffffffffffffffffffffffffffffff167fce241d7ca1f669fee44b6fc00b8eba2df3bb514eed0f6f668f8f89096e81ed9460405160405180910390a26106d6806100976000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806313af4035146100515780637a9e5e4b146100955780638da5cb5b146100d9578063bf7e214f14610123575b600080fd5b6100936004803603602081101561006757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061016d565b005b6100d7600480360360208110156100ab57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102b6565b005b6100e16103fd565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61012b610423565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61019b336000357fffffffff0000000000000000000000000000000000000000000000000000000016610448565b61020d576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f64732d617574682d756e617574686f72697a656400000000000000000000000081525060200191505060405180910390fd5b80600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167fce241d7ca1f669fee44b6fc00b8eba2df3bb514eed0f6f668f8f89096e81ed9460405160405180910390a250565b6102e4336000357fffffffff0000000000000000000000000000000000000000000000000000000016610448565b610356576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f64732d617574682d756e617574686f72697a656400000000000000000000000081525060200191505060405180910390fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f1abebea81bfa2637f28358c371278fb15ede7ea8dd28d2e03b112ff6d936ada460405160405180910390a250565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60003073ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff161415610487576001905061069b565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff1614156104e6576001905061069b565b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161415610545576000905061069b565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663b70096138430856040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19168152602001935050505060206040518083038186803b15801561065d57600080fd5b505afa158015610671573d6000803e3d6000fd5b505050506040513d602081101561068757600080fd5b810190808051906020019092919050505090505b9291505056fea265627a7a72315820f079705d253b512487d13885a8d9f2959b36e52d01a2820a9ac5f48811cc99d864736f6c634300050c0032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806313af4035146100515780637a9e5e4b146100955780638da5cb5b146100d9578063bf7e214f14610123575b600080fd5b6100936004803603602081101561006757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061016d565b005b6100d7600480360360208110156100ab57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102b6565b005b6100e16103fd565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61012b610423565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61019b336000357fffffffff0000000000000000000000000000000000000000000000000000000016610448565b61020d576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f64732d617574682d756e617574686f72697a656400000000000000000000000081525060200191505060405180910390fd5b80600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167fce241d7ca1f669fee44b6fc00b8eba2df3bb514eed0f6f668f8f89096e81ed9460405160405180910390a250565b6102e4336000357fffffffff0000000000000000000000000000000000000000000000000000000016610448565b610356576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f64732d617574682d756e617574686f72697a656400000000000000000000000081525060200191505060405180910390fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f1abebea81bfa2637f28358c371278fb15ede7ea8dd28d2e03b112ff6d936ada460405160405180910390a250565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60003073ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff161415610487576001905061069b565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff1614156104e6576001905061069b565b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161415610545576000905061069b565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663b70096138430856040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19168152602001935050505060206040518083038186803b15801561065d57600080fd5b505afa158015610671573d6000803e3d6000fd5b505050506040513d602081101561068757600080fd5b810190808051906020019092919050505090505b9291505056fea265627a7a72315820f079705d253b512487d13885a8d9f2959b36e52d01a2820a9ac5f48811cc99d864736f6c634300050c0032",
+  "sourceMap": "844:173:12:-;;;1079:10:3;1071:5;;:18;;;;;;;;;;;;;;;;;;1116:10;1104:23;;;;;;;;;;;;844:173:12;;;;;;",
+  "deployedSourceMap": "844:173:12:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;844:173:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1140:130:3;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1140:130:3;;;;;;;;;;;;;;;;;;;:::i;:::-;;1276:167;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1276:167:3;;;;;;;;;;;;;;;;;;;:::i;:::-;;1007:26;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;971:30;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1140:130;1481:33;1494:10;1506:7;;;;1481:12;:33::i;:::-;1473:66;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1224:6;1216:5;;:14;;;;;;;;;;;;;;;;;;1257:5;;;;;;;;;;;1245:18;;;;;;;;;;;;1140:130;:::o;1276:167::-;1481:33;1494:10;1506:7;;;;1481:12;:33::i;:::-;1473:66;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1376:10;1364:9;;:22;;;;;;;;;;;;;;;;;;1425:9;;;;;;;;;;;1401:35;;;;;;;;;;;;1276:167;:::o;1007:26::-;;;;;;;;;;;;;:::o;971:30::-;;;;;;;;;;;;;:::o;1563:370::-;1633:4;1668;1653:20;;:3;:20;;;1649:278;;;1696:4;1689:11;;;;1649:278;1728:5;;;;;;;;;;;1721:12;;:3;:12;;;1717:210;;;1756:4;1749:11;;;;1717:210;1806:1;1781:27;;:9;;;;;;;;;;;:27;;;1777:150;;;1831:5;1824:12;;;;1777:150;1874:9;;;;;;;;;;;:17;;;1892:3;1905:4;1912:3;1874:42;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1874:42:3;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1874:42:3;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1874:42:3;;;;;;;;;;;;;;;;1867:49;;1563:370;;;;;:::o",
+  "source": "// thing.sol - `auth` with handy mixins. your things should be DSThings\n\n// Copyright (C) 2017  DappHub, LLC\n\n// This program is free software: you can redistribute it and/or modify\n// it under the terms of the GNU General Public License as published by\n// the Free Software Foundation, either version 3 of the License, or\n// (at your option) any later version.\n\n// This program is distributed in the hope that it will be useful,\n// but WITHOUT ANY WARRANTY; without even the implied warranty of\n// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n// GNU General Public License for more details.\n\n// You should have received a copy of the GNU General Public License\n// along with this program.  If not, see <http://www.gnu.org/licenses/>.\n\npragma solidity >=0.4.23;\n\nimport './auth.sol';\nimport './note.sol';\nimport './math.sol';\n\ncontract DSThing is DSAuth, DSNote, DSMath {\n    function S(string memory s) internal pure returns (bytes4) {\n        return bytes4(keccak256(abi.encodePacked(s)));\n    }\n\n}",
+  "sourcePath": "/home/saru/Blockchain/makerdao-priv-delegation/maker-gov/maker-ui/contracts/thing.sol",
+  "ast": {
+    "absolutePath": "/home/saru/Blockchain/makerdao-priv-delegation/maker-gov/maker-ui/contracts/thing.sol",
+    "exportedSymbols": {
+      "DSThing": [
+        4687
+      ]
+    },
+    "id": 4688,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4660,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "753:25:12"
+      },
+      {
+        "absolutePath": "/home/saru/Blockchain/makerdao-priv-delegation/maker-gov/maker-ui/contracts/auth.sol",
+        "file": "./auth.sol",
+        "id": 4661,
+        "nodeType": "ImportDirective",
+        "scope": 4688,
+        "sourceUnit": 409,
+        "src": "780:20:12",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/saru/Blockchain/makerdao-priv-delegation/maker-gov/maker-ui/contracts/note.sol",
+        "file": "./note.sol",
+        "id": 4662,
+        "nodeType": "ImportDirective",
+        "scope": 4688,
+        "sourceUnit": 1705,
+        "src": "801:20:12",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/saru/Blockchain/makerdao-priv-delegation/maker-gov/maker-ui/contracts/math.sol",
+        "file": "./math.sol",
+        "id": 4663,
+        "nodeType": "ImportDirective",
+        "scope": 4688,
+        "sourceUnit": 1662,
+        "src": "822:20:12",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4664,
+              "name": "DSAuth",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 408,
+              "src": "864:6:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DSAuth_$408",
+                "typeString": "contract DSAuth"
+              }
+            },
+            "id": 4665,
+            "nodeType": "InheritanceSpecifier",
+            "src": "864:6:12"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4666,
+              "name": "DSNote",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1704,
+              "src": "872:6:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DSNote_$1704",
+                "typeString": "contract DSNote"
+              }
+            },
+            "id": 4667,
+            "nodeType": "InheritanceSpecifier",
+            "src": "872:6:12"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4668,
+              "name": "DSMath",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1661,
+              "src": "880:6:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DSMath_$1661",
+                "typeString": "contract DSMath"
+              }
+            },
+            "id": 4669,
+            "nodeType": "InheritanceSpecifier",
+            "src": "880:6:12"
+          }
+        ],
+        "contractDependencies": [
+          294,
+          408,
+          1661,
+          1704
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4687,
+        "linearizedBaseContracts": [
+          4687,
+          1661,
+          1704,
+          408,
+          294
+        ],
+        "name": "DSThing",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4685,
+              "nodeType": "Block",
+              "src": "952:62:12",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "id": 4680,
+                                "name": "s",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 4671,
+                                "src": "1003:1:12",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 4678,
+                                "name": "abi",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 5415,
+                                "src": "986:3:12",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_abi",
+                                  "typeString": "abi"
+                                }
+                              },
+                              "id": 4679,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "memberName": "encodePacked",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "986:16:12",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+                                "typeString": "function () pure returns (bytes memory)"
+                              }
+                            },
+                            "id": 4681,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "986:19:12",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes_memory_ptr",
+                              "typeString": "bytes memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_bytes_memory_ptr",
+                              "typeString": "bytes memory"
+                            }
+                          ],
+                          "id": 4677,
+                          "name": "keccak256",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 5422,
+                          "src": "976:9:12",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                            "typeString": "function (bytes memory) pure returns (bytes32)"
+                          }
+                        },
+                        "id": 4682,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "976:30:12",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "id": 4676,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "969:6:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_bytes4_$",
+                        "typeString": "type(bytes4)"
+                      },
+                      "typeName": "bytes4"
+                    },
+                    "id": 4683,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "969:38:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "functionReturnParameters": 4675,
+                  "id": 4684,
+                  "nodeType": "Return",
+                  "src": "962:45:12"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4686,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "S",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4672,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4671,
+                  "name": "s",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4686,
+                  "src": "904:15:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 4670,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "904:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "903:17:12"
+            },
+            "returnParameters": {
+              "id": 4675,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4674,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4686,
+                  "src": "944:6:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 4673,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "944:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "943:8:12"
+            },
+            "scope": 4687,
+            "src": "893:121:12",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 4688,
+        "src": "844:173:12"
+      }
+    ],
+    "src": "753:264:12"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/saru/Blockchain/makerdao-priv-delegation/maker-gov/maker-ui/contracts/thing.sol",
+    "exportedSymbols": {
+      "DSThing": [
+        4687
+      ]
+    },
+    "id": 4688,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4660,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "753:25:12"
+      },
+      {
+        "absolutePath": "/home/saru/Blockchain/makerdao-priv-delegation/maker-gov/maker-ui/contracts/auth.sol",
+        "file": "./auth.sol",
+        "id": 4661,
+        "nodeType": "ImportDirective",
+        "scope": 4688,
+        "sourceUnit": 409,
+        "src": "780:20:12",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/saru/Blockchain/makerdao-priv-delegation/maker-gov/maker-ui/contracts/note.sol",
+        "file": "./note.sol",
+        "id": 4662,
+        "nodeType": "ImportDirective",
+        "scope": 4688,
+        "sourceUnit": 1705,
+        "src": "801:20:12",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/saru/Blockchain/makerdao-priv-delegation/maker-gov/maker-ui/contracts/math.sol",
+        "file": "./math.sol",
+        "id": 4663,
+        "nodeType": "ImportDirective",
+        "scope": 4688,
+        "sourceUnit": 1662,
+        "src": "822:20:12",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4664,
+              "name": "DSAuth",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 408,
+              "src": "864:6:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DSAuth_$408",
+                "typeString": "contract DSAuth"
+              }
+            },
+            "id": 4665,
+            "nodeType": "InheritanceSpecifier",
+            "src": "864:6:12"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4666,
+              "name": "DSNote",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1704,
+              "src": "872:6:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DSNote_$1704",
+                "typeString": "contract DSNote"
+              }
+            },
+            "id": 4667,
+            "nodeType": "InheritanceSpecifier",
+            "src": "872:6:12"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4668,
+              "name": "DSMath",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1661,
+              "src": "880:6:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DSMath_$1661",
+                "typeString": "contract DSMath"
+              }
+            },
+            "id": 4669,
+            "nodeType": "InheritanceSpecifier",
+            "src": "880:6:12"
+          }
+        ],
+        "contractDependencies": [
+          294,
+          408,
+          1661,
+          1704
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4687,
+        "linearizedBaseContracts": [
+          4687,
+          1661,
+          1704,
+          408,
+          294
+        ],
+        "name": "DSThing",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4685,
+              "nodeType": "Block",
+              "src": "952:62:12",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "id": 4680,
+                                "name": "s",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 4671,
+                                "src": "1003:1:12",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 4678,
+                                "name": "abi",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 5415,
+                                "src": "986:3:12",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_abi",
+                                  "typeString": "abi"
+                                }
+                              },
+                              "id": 4679,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "memberName": "encodePacked",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "986:16:12",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+                                "typeString": "function () pure returns (bytes memory)"
+                              }
+                            },
+                            "id": 4681,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "986:19:12",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes_memory_ptr",
+                              "typeString": "bytes memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_bytes_memory_ptr",
+                              "typeString": "bytes memory"
+                            }
+                          ],
+                          "id": 4677,
+                          "name": "keccak256",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 5422,
+                          "src": "976:9:12",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                            "typeString": "function (bytes memory) pure returns (bytes32)"
+                          }
+                        },
+                        "id": 4682,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "976:30:12",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "id": 4676,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "969:6:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_bytes4_$",
+                        "typeString": "type(bytes4)"
+                      },
+                      "typeName": "bytes4"
+                    },
+                    "id": 4683,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "969:38:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "functionReturnParameters": 4675,
+                  "id": 4684,
+                  "nodeType": "Return",
+                  "src": "962:45:12"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4686,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "S",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4672,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4671,
+                  "name": "s",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4686,
+                  "src": "904:15:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 4670,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "904:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "903:17:12"
+            },
+            "returnParameters": {
+              "id": 4675,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4674,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4686,
+                  "src": "944:6:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 4673,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "944:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "943:8:12"
+            },
+            "scope": 4687,
+            "src": "893:121:12",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 4688,
+        "src": "844:173:12"
+      }
+    ],
+    "src": "753:264:12"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.20",
+  "updatedAt": "2020-07-02T08:37:58.613Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
